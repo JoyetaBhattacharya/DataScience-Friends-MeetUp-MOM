@@ -3,4 +3,4 @@ DataScience-Friends-MeetUp-MOM
 
 ***
 **Date**
-- [25/4/2020](joyeta)
+- [19/4/2020](joyeta)
