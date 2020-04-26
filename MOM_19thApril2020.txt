@@ -1,0 +1,42 @@
+Participants : Harjit, Dheeraj, Pratik, Amber, Shahsnak, Joyeta
+
+*Mom for the meeting on 18th April 2020*
+
+1. Covert Column type into appropriate data types so we can capture the null values. 
+2. Covid-19 cases distribution based on Nationality --- change to bar plot.
+3. Apply stack plot for top 20 states analysis
+sample code:
+phone_brand_gender_report_group.plot.bar(stacked=True)
+plt.xlabel("Types of brands")
+plt.ylabel("Number of users")
+plt.title("Distribution of Male & Female users across Phone Brands")
+
+*Problem Statement*
+1)The population of state & city which are hotspot- using country Map
+2) Temperature & climate condition there
+3) No of Test Performed
+4) Which Government is there in State
+5) Source of Infection 
+6) Age group 
+7) When the first patient surface & in the number of days patient is getting doubled ... Finding the spread rate and prediction of the situation on 1st May 2020.
+8)The last two weeks trend of death and new cases. 
+9)Ratio chart of hospitalization, recovery and death with creating new data frame 
+10)District wise count of hospitalization, recovery and death
+11)Day wise count of hospitalization, recovery and death
+ 
+Few codes discussed in meeting 
+
+1. to remove null cells from the data set
+data_death_recoveries = data_death_recoveries[~data_death_recoveries['date'].isnull()]
+
+2. Few ages are having age braket like 28-35, replace them 
+
+df['agebracket'].unique()
+df["agebracket"].replace({"28-35": "35"}, inplace=True)
+
+*ML- Timeseries in separate notebook*
+Dataset to use : https://api.covid19india.org/data.json
+1. df_raw_data['statuschangedate'] = df_raw_data['statuschangedate'].dt.strftime('%Y-%m-%d')
+df_raw_data['dateannounced'] = df_raw_data['dateannounced'].dt.strftime('%Y-%m-%d')
+date format
+2. Predict new cases in May
